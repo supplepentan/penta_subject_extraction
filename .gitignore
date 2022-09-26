@@ -1,0 +1,35 @@
+# Logs
+front_vite/logs
+front_vite/*.log
+front_vite/npm-debug.log*
+front_vite/yarn-debug.log*
+front_vite/yarn-error.log*
+front_vite/pnpm-debug.log*
+front_vite/lerna-debug.log*
+
+front_vite/node_modules
+front_vite/dist
+front_vite/dist-ssr
+*.local
+
+# Editor directories and files
+front_vite/.vscode/*
+front_vite/!.vscode/extensions.json
+front_vite/.idea
+front_vite/.DS_Store
+front_vite/*.suo
+front_vite/*.ntvs*
+front_vite/*.njsproj
+front_vite/*.sln
+front_vite/*.sw?
+
+# app
+app/venv/
+app/upload/
+app/output/
+
+# deta
+deta/
+
+.mypy_cache
+app/__pycache__
