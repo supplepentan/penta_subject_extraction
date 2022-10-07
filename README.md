@@ -2,7 +2,7 @@
 本アプリは、バックエンドにPythonのFastAPI、フロントエンドにViteをつかったVue.js3で開発を行っておりまふ。
 
 # 環境設定
-## Gitからダウンロード
+## GitHubからダウンロード
 
 `gh repo clone supplepentan/penta_subject_extraction`
 
