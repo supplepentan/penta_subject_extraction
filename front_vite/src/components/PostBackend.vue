@@ -6,7 +6,7 @@ const props = defineProps({
     buckendUrl: String
 });
 
-const file = ref();
+const file = ref("");
 const previewImage = ref();
 const fileSelected = (event) => {
     file.value = event.target.files[0];
@@ -38,14 +38,25 @@ const fileUpload = () => {
 };
 </script>
 <template>
-    <img v-bind:src="previewImage" class="img-fluid" alt="" />
-    <label
-        class="px-4 py-2 bg-transparent border-blue-500 rounded cursor-pointer bg-sky-200 ring-2 hover:bg-blue-300 hover:text-white hover:border-transparent">
-        Select File !
-        <input class="hidden" type="file" v-on:change="fileSelected" />
-    </label>
-    <button v-on:click="fileUpload"
-        class="px-4 py-2 font-semibold text-blue-700 bg-transparent bg-blue-100 border-blue-500 rounded ring-2 hover:bg-blue-300 hover:text-white hover:border-transparent">
-        Make It !
-    </button>
+    <div>
+        <div class="grid grid-cols-2">
+            <div>
+                <img v-bind:src="previewImage" class="img-fluid" alt="" />
+                <label
+                    class="px-4 py-2 bg-transparent border-blue-500 rounded cursor-pointer bg-sky-200 ring-2 hover:bg-blue-300 hover:text-white hover:border-transparent">
+                    Select File !
+                    <input class="hidden" type="file" v-on:change="fileSelected" />
+                </label>
+                <button v-on:click="fileUpload"
+                    class="px-4 py-2 font-semibold text-blue-700 bg-transparent bg-blue-100 border-blue-500 rounded ring-2 hover:bg-blue-300 hover:text-white hover:border-transparent">
+                    Make It !
+                </button>
+            </div>
+            <div v-if="file" class="p-2">
+                <p>File Name: {{file.name}}</p>
+                <p>File Size: {{file.size}}</p>
+                <p>File Type: {{file.type}}</p>
+            </div>
+        </div>
+    </div>
 </template>

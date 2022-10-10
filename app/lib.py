@@ -92,7 +92,4 @@ def subject_extraction(input_image, mask_image, subject_extraction_image):
     pil_image = Image.fromarray(np.uint8(foreground))
     pil_image.save(subject_extraction_image)
 
-    # combine image, foreground, and alpha into one line
-    combined = np.concatenate((image, foreground, matte * 255), axis=1)
-    combined = Image.fromarray(np.uint8(combined)).resize((rw, rh))
-    return combined
+    return
