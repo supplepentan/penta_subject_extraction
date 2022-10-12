@@ -54,7 +54,7 @@ const fileUpload = () => {
             <div>
                 <img v-bind:src="previewImage" class="img-fluid" alt="" />
             </div>
-            <div v-if="file" class="p-2">
+            <div v-if="file" class="m-2 p-2 border rounded-lg border-slate-400">
                 <p>File Name: {{file.name}}</p>
                 <p>File Size: {{file.size}}</p>
                 <p>File Type: {{file.type}}</p>
